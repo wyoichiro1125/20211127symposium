@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>テキスト名</title>
+                <editor>SAT大蔵経テキストデータベース研究会</editor>
+                <respStmt>
+                    <resp>TEI Encoding</resp>
+                    <persName xml:id="担当者id">作業担当者名</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>TEI Consulting</resp>
+                    <persName>Kiyonori Nagasaki</persName>
+                </respStmt>
+                <respStmt>
+                    <resp>Automatic Encoding</resp>
+                    <persName xml:id="wyoichiro">Yoichiro Watanabe</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>
+                    <orgName ref="http://21dzk.l.u-tokyo.ac.jp/SAT/">SAT大蔵経テキストデータベース研究会</orgName>
+                </publisher>
+                <pubPlace>The Internet</pubPlace>
+                <availability>
+                    <p>CC BY-SA</p>
+                </availability>
+                <date when="2017">2017</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <title>タイトル</title>
+                    <author sameAs="#親鸞" ref="http://viaf.org/viaf/xxxx">著者名</author>
+                    <date>1924</date>
+                    <num type="Taisho">大正蔵番号</num>
+                    <series>
+                        <title type="main">大正新脩大藏經</title>
+                        <biblScope unit="部">部</biblScope>
+                        <biblScope unit="volume">巻数</biblScope>
+                    </series>
+                </bibl>
+                <listWit>
+                    <witness xml:id="原">これは例です</witness>
+                    <witness xml:id="甲"/>
+                    <witness xml:id="乙"/>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <variantEncoding method="double-end-point" location="external"/>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body style="writing-mode vertical-rl">
+            <lb n="Txxxx_,xx,xxxaxx"/>
+            <div1 type="taisho_head">
+                <p>No.xxxx</p>
+            </div1>
+            <div1 type="taisho_body">
+                <div2 type="body" subtype="chapter" n="1">
+                    <milestone unit="fascicle_beginning" n="1"/>
+                    <ab type="fascicle_beginning">
+                        <title type="fascicle_beginning">タイトル</title>
+                        <persName role="author" ref="http://viaf.org/viaf/xxxx">著者名</persName>作</ab>
+                    <p>
+                        <title type="desc">このチャプターのタイトル</title>
+                        <anchor xml:id="tft_sample"/>実際のテキスト<anchor xml:id="tft_sample_e"/></p>
+                </div2>
+                <div2 type="body" subtype="chapter" n="2">
+                    <div3 type="body" subtype="subchapter" n="2.1">
+                        <p>テキスト</p>
+                    </div3>
+                    <div3 type="body" subtype="subchaper" n="2.2">
+                        <p>テキスト</p>
+                    </div3>
+                </div2>
+            </div1>
+        </body>
+        <back>
+            <note target="#tft_xxx_1" targetEnd="#tft_xxx_1e" type="footnote"> 底本情報など </note>
+            <listApp>
+                <app from="#tft_sample" to="#tft_sample_e">
+                    <lem wit="#大正">実際のテキスト</lem>
+                    <rdg wit="#甲">甲本の異読</rdg>
+                    <rdg wit="#乙">乙本の異読</rdg>
+                </app>
+            </listApp>
+        </back>
+    </text>
+</TEI>
